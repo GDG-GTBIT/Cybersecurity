@@ -6,10 +6,13 @@
 This CTF was the first challenge provided. It goes as follows:
 
 CTF - 
+
 ![](images/image.001.png)
 
 
-HINT- ![](images/image.002.png)
+HINT- 
+
+![](images/image.002.png)
 
 Now, as the hint suggests, we need to use Caesar cipher to solve this CTF. So, I opened Cyberchef and pasted this CTF there and applied Caesar cipher tool, namely ROT13. I used ROT13 because in the hint the format of the flag is given as GDSC_CTF{} and in the CTF text some gibberish text in that format is present. ROT47 was not my preference because it would have shifted all the special characters too which would disturb the format of my flag. So, I applied ROT13 on it and it did not result in the flag.
 
@@ -28,6 +31,9 @@ gdsc_ctf{shift_happens}
 ![](images/image.005.png)
 
 
+
+
+
 ## 2. **MindROT**
 \- By Jaskaran
 
@@ -39,7 +45,7 @@ readme.txt
 
 ![](images/image.007.jpeg)
 
-Solution -
+**Solution -**
 
 First thing I do when I see a bunch of gibberish text is to put it in the boxentriq cipher identiﬁer, upon doing that
 
@@ -69,8 +75,6 @@ which was on brand for my suspicions since I thought that the level will be ROT 
 ### METHOD 1
 
 \- By Gurnoor
-
-![](images/image.014.png)
 
 **CTF-** [Click Here](https://drive.google.com/file/d/1l0KgPZIHZ9HjtoZAaipxluOH4k2-GzzI/view?usp=drive_link)  
 
@@ -168,9 +172,11 @@ Oh no, we've just abandoned our pirate persona, and now they're asking us to rev
 
 If you've had the opportunity to review the initial PDF document provided, the process for extracting the flag is straightforward.
 
--       Open the image file using Notepad.
--       Execute a `Ctrl+F` command to initiate the find function.
--       Conduct a search specifically for the flag labelled as GDSC_CTF.
+- Open the image file using Notepad.
+
+- Execute a `Ctrl+F` command to initiate the find function.
+
+- Conduct a search specifically for the flag labelled as GDSC_CTF.
 
 This step-by-step approach ensures a systematic exploration of the image file's contents, making it easier to locate and identify the desired flag within the given context.
 
