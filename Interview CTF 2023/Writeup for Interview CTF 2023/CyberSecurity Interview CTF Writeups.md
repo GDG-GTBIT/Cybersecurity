@@ -281,3 +281,63 @@ now putting it into a decimal-to-text converter, gave me a bunch of plain text w
 ```
 Let’s make this a bit trickier…
 ```
+  
+
+
+## **Boss Challenge**
+\- Written by: @Sahiba Kaur Sethi
+
+CTF 
+
+![image 1](https://github.com/dsc-gtbit/Cybersecurity/assets/140737702/2d8632d3-95e3-47bc-9d54-ade71a82095b)
+
+Readme.txt
+
+![image 2](https://github.com/dsc-gtbit/Cybersecurity/assets/140737702/fbd575cd-9395-4ab7-987c-dd25db27557a)
+
+![image 3](https://github.com/dsc-gtbit/Cybersecurity/assets/140737702/d76f5173-a66e-4465-bc05-7f6d617c8e53)
+
+Context
+The boss challenge was another CTF provided by the GDSC team to the participants to test their knowledge, skills and research abilities. Only this time this CTF came with some bigger twists. Anyone who would have solve the CTF would be directly welcomed to the team without any interview or other selection procedures. As exciting and interesting it sounds, it took a lot of research work still the flag was not found. Let us go through the CTF and start solving it.
+
+## **Solution-**
+
+This image was provided and the data hidden in the image was to be found but the only twist was that the key flag found from this image was to be used to find the main flag using the readme file.
+
+After analysing the image I noticed that there were some dots present in different colours on the top left of the image.
+
+![image 4](https://github.com/dsc-gtbit/Cybersecurity/assets/140737702/94526093-3944-47be-8d24-88466f800c39)
+
+After reading the readme file it was sure that these dots were the points on the graph and somehow some graphical outputs were to be considered. Firstly, I uploaded this image file on exif.tools to find the metadata and see if the flag was hidden in the image’s data but no flag or other useful information was found which is obvious as the boss challenge would not give any direct output.
+
+![image 5](https://github.com/dsc-gtbit/Cybersecurity/assets/140737702/27b6850a-a1b8-4e7b-bbc8-ccee1577b415)
+
+A little bit of research on google, it suggested to find the pixels of the image using a python code using the PIL library. 
+
+![image 6](https://github.com/dsc-gtbit/Cybersecurity/assets/140737702/075b3c17-10a6-4f23-9682-dee55a3ca830)
+
+![image 7](https://github.com/dsc-gtbit/Cybersecurity/assets/140737702/a5451839-a470-4656-8f23-daf705329d04)
+
+The output gave me the RGBA values but it was of no use as my next step could be converting them to ASCII values but all these numbers exceeded the character range of ASCII values so it was of no use. I also tried to convert this unsigned ASCII to the signed one and then use it but it still did not give any valued outcome. I tried various new methods for 2-3 days but nothing seemed to work. On reading the readme file again it hit me that I missed one part of the hint provided which was that the oldest and the most unused application come handy in viewing pictures and I thought of using paint to find out any information it could provide. On implementing grid lines and moving the cursor over the points I could read the coordinates. 
+
+![image 8](https://github.com/dsc-gtbit/Cybersecurity/assets/140737702/ee6dfc2d-bd00-48c3-81c1-73ea1640dd8b)
+
+I made a list of all these points and then converted the ascii values to text and the output was still jumbled and not in proper form.
+
+![image 9](https://github.com/dsc-gtbit/Cybersecurity/assets/140737702/07938231-92e0-43a7-accb-14e18f139b98)
+
+On arranging these values in ascending order and converting into text the key flag was found to be “GDSC{LBTGQ_Lights_hehe}”.
+
+![image 10](https://github.com/dsc-gtbit/Cybersecurity/assets/140737702/4d50c4f2-b36e-4c8a-8404-ee22a5af42e1)
+
+This key flag was then supposed to be used to solve the main flag. On applying the AES decryption on the main flag and the key flag using cbc mode of decryption the main flag was found to be “GDSC_CTF{This_is_what_counts}”.
+
+![image 11](https://github.com/dsc-gtbit/Cybersecurity/assets/140737702/d9c2c8a4-5ba1-4e1b-b358-c174228191c3)
+ 
+Many new types of decryption tools and methods were explored while solving the Boss Challenge. it was quite interesting and broaden the thinking and researching techniques.
+
+**Flag**-
+
+```
+GDSC_CTF{This_is_what_counts}
+```
