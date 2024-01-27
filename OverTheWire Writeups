@@ -1,0 +1,18 @@
+OverTheWire Write-Ups
+Welcome to the repository containing detailed write-ups for OverTheWire challenges by the GDSC cybersecurity team. This collection is intended to serve as a resource for individuals looking 
+to enhance their cybersecurity skills through hands-on experience.
+
+
+How to Contribute
+If you've solved additional challenges or have alternative solutions, contributions are welcome! Please follow these steps:
+
+Fork this repository.
+Create a new branch for your changes: git checkout -b feature/new-writeup.
+Add your write-up in the appropriate folder, following the same structure as existing write-ups.
+Ensure that your write-up is clear, well-documented, and provides insights into your thought process.
+Add a link to your write-up in the relevant section of the Table of Contents.
+Commit your changes: git commit -m "Add write-up for Level X of Challenge Y".
+Push to the branch: git push origin feature/new-writeup.
+Create a pull request.
+Disclaimer
+These write-ups are meant for educational purposes, and it is highly recommended to attempt solving challenges on your own before referring to the solutions. Sharing solutions publicly may spoil the learning experience for others. Use this repository responsibly and respect the OverTheWire community guidelines.
